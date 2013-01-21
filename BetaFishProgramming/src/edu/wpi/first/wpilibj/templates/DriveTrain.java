@@ -3,9 +3,7 @@
  * and open the template in the editor.
  */
 package edu.wpi.first.wpilibj.templates;
-import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.Victor;
-
+import edu.wpi.first.wpilibj.templates.Objects;
 /**
  *
 <<<<<<< HEAD
@@ -16,24 +14,19 @@ import edu.wpi.first.wpilibj.Victor;
  */
 public class DriveTrain {
     //declarations... yet to see about Victors bl and br
-    Victor lef1 = new Victor(1);
-    Victor rig1 = new Victor(3);
-    Victor lef2 = new Victor(2);
-    Victor rig2 = new Victor(4);
-    Joystick lef=new Joystick(2);
-    Joystick right=new Joystick(1);
+    
     
     /**
      * 
      * @param setSpeeds() sets speed
      */
     public void setSpeeds(){
-        double leftmove=-lef.getY();
-        double rightmove =right.getY();
-        lef1.set(leftmove);
-        rig1.set(rightmove);
-        lef2.set(leftmove);
-        rig2.set(rightmove);
+        double leftmove=-Objects.lef.getY();
+        double rightmove =Objects.right.getY();
+        Objects.lef1.set(leftmove);
+        Objects.rig1.set(rightmove);
+        Objects.lef2.set(leftmove);
+        Objects.rig2.set(rightmove);
         //sensitivity measures, yet to be commented in(if commented in add before the .sets)
         /*
         if(leftmove>-0.1&&leftmove<0.1){

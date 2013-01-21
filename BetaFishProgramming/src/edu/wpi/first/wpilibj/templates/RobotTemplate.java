@@ -32,6 +32,8 @@ public class RobotTemplate extends SimpleRobot {
      */
     public void operatorControl() {
             DriveTrain dt=new DriveTrain();
+            pneumatics pt=new pneumatics();
+            pt.EngagePneumatics();
             while(true){
                 System.out.println("new code");
                 dt.setSpeeds();
